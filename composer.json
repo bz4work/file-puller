@@ -10,10 +10,8 @@
             "email": "bz4work@gmail.com"
         }
     ],
-    "require": {
-        "yiisoft/yii2": "~2.0.0",
-        "php": ">=7.2.0",
-        "curl": ">=1.0"
+    "require-dev": {
+        "codeception/codeception": "*"
     },
     "autoload": {
         "psr-4": {

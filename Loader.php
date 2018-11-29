@@ -19,6 +19,12 @@ class Loader implements LoaderInterface
     public function __construct($config_file = 'config/main.php')
     {
         $this->config = require __DIR__ .DIRECTORY_SEPARATOR. $config_file;
+        return $this;
+    }
+
+    public function getConfig()
+    {
+        return $this->config;
     }
 
     /**
