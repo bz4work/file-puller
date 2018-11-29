@@ -1,0 +1,28 @@
+{
+    "name": "bz4work/file-puller",
+    "description": "Loading remote file across HTTP protocol. ",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "bz4work",
+            "email": "bz4work@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "bz4work\\filepuller\\": ""
+        }
+    },
+    "repositories":[
+        {
+            "type": "git",
+            "url": "https://github.com/bz4work/file-puller.git"
+        }
+    ]
+}
