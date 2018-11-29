@@ -24,21 +24,18 @@ class Loader implements LoaderInterface
     /**
      * Print file in browser.
      *
-     * @param $filename
+     * @param $full_path_file
      */
-    public function print_file($filename)
+    public function print_file($full_path_file)
     {
-
-        $file = $this->config['file_path'].DIRECTORY_SEPARATOR.$filename;
-
-        $path_parts = pathinfo($file);
+        $path_parts = pathinfo($full_path_file);
 
         $ext = strtolower($path_parts['extension']);
         $header1 = "Content-Type: image/$ext";
 
         header($header1);
 
-        readfile($file);
+        readfile($full_path_file);
     }
 
     /**
