@@ -25,6 +25,14 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
+1. Создайте в вашей корневой папке которая доступна для веб (public_html) папку:
+    
+    
+    image_download
+В ней будут сохранятся скачанные файлы.
+
+    
+
 Once the extension is installed, simply use it in your code by  :
 
 ```php
