@@ -122,11 +122,6 @@ class Loader implements LoaderInterface
             }
         });
 
-        //If error - throw an Exception
-        if(curl_errno($ch)){
-            throw new \Exception(curl_error($ch));
-        }
-
         //Close handler
         curl_close($ch);
 
