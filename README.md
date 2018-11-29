@@ -80,3 +80,10 @@ $loader->print_file($image);//print file if needed
 
 
 4. Run tests:
+
+    
+    Run with code coverage generating:
+    ./vendor/bin/codecept run --steps --coverage-html -v
+    
+    Run without code cover generating:
+    ./vendor/bin/codecept run --steps -v

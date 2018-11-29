@@ -22,9 +22,27 @@ class Loader implements LoaderInterface
         return $this;
     }
 
+    /**
+     * Get all configs.
+     *
+     * @return mixed
+     */
     public function getConfig()
     {
         return $this->config;
+    }
+
+    /**
+     * Set new or override old config param.
+     *
+     * @param $name
+     * @param $value
+     * @return mixed
+     */
+    public function setConfig($name, $value)
+    {
+        $this->config[$name] = $value;
+        return $this->config[$name];
     }
 
     /**
@@ -147,7 +165,12 @@ class Loader implements LoaderInterface
 
         $type = pathinfo($path)['extension'];
 
-        $im = imagecreatefromstring($file_data);
+        try{
+            $im = imagecreatefromstring($file_data);
+        }catch (\Exception $e){
+            throw new \Exception('Data from Request is not in a recognized format.');
+        }
+
         if ($im === false) {
             throw new \Exception('Could not create image.');
         }
@@ -163,5 +186,4 @@ class Loader implements LoaderInterface
 
         return $path;
     }
-
 }
